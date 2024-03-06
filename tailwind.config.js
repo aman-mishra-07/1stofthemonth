@@ -12,7 +12,20 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      borderRadius: {
+        '4xl' : '100px'
+      }
     },
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '1ofthemonth.vercel.app',
+        port: '',
+        pathname: '/account123/**',
+      },
+    ],
   },
   plugins: [],
 };
