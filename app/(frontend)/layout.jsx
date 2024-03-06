@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Sidenav from "../ui/Sidenav";
 import Tabs from "../ui/Tabs";
 import SectionHeading from "../ui/SectionHeading";
@@ -23,7 +23,7 @@ const layout = ({ children }) => {
           </aside>
           <div className="">
             <Tabs />
-            {children}
+            <Suspense>{children}</Suspense>
           </div>
         </div>
       </section>

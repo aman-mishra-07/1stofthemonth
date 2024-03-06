@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./ui/Navbar";
+import { Suspense } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,7 @@ export default function RootLayout({ children }) {
         <div className="md:mr-28 ">
           <Navbar/>
         </div>
-        {children}
+        <Suspense>{children}</Suspense>
       </body>
     </html>
   );
