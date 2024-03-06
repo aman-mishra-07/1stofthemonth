@@ -1,12 +1,20 @@
-import React from 'react'
+import React from "react";
+import Family from "./components/Family";
+import Doctor from "./components/Doctor";
+import { Suspense } from "react";
 
-const page = () => {
+const page = ({ searchParams }) => {
+  const tabs = {
+    family: <Family />,
+    doctor: <Doctor />,
+  };
+
   return (
     <div>
-      account
-      
+      <Suspense>
+        {tabs[searchParams.tab] ? tabs[searchParams.tab] : tabs.family}
+      </Suspense>
     </div>
-  )
-}
-
+  );
+};
 export default page

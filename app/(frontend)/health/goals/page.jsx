@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import Activity from "./components/Activity";
 import Diet from "./components/Diet";
 import MyGoals from "./components/MyGoals";
@@ -11,7 +12,9 @@ const page = ({ searchParams }) => {
 
   return (
     <div>
-      {tabs[searchParams.tab] ? tabs[searchParams.tab] : tabs["my-goals"]}
+      <Suspense>
+        {tabs[searchParams.tab] ? tabs[searchParams.tab] : tabs["my-goals"]}
+      </Suspense>
     </div>
   );
 };

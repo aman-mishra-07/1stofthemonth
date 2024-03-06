@@ -1,60 +1,71 @@
 import { CiHeart } from "react-icons/ci";
+import { IoBodyOutline } from "react-icons/io5";
+import { HiOutlineUserGroup } from "react-icons/hi";
+import { GoScreenFull } from "react-icons/go";
+import { GiStairsGoal } from "react-icons/gi";
+
+
 
 export const sideNavOptions = {
     'health': [
         {
             title: "All",
-            icon: <CiHeart size={30} />,
+            icon: <HiOutlineUserGroup size={30} />,
             path: "/health",
         },
         {
             title: "Body Parts",
-            icon: <CiHeart size={30} />,
+            icon: <IoBodyOutline size={30} />,
             path: "/health/body-parts",
         },
         {
             title: "Goals",
-            icon: <CiHeart size={30} />,
+            icon: <GiStairsGoal size={30} />,
             path: "/health/goals",
         },
         {
             title: "Cancer screening",
-            icon: <CiHeart size={30} />,
+            icon: <GoScreenFull size={30} />,
             path: "/health/cancer-screening",
         },
     ],
     'learnings': [
         {
-            title: "books",
+            title: "routines",
             icon: <CiHeart size={30} />,
             path: "/learnings",
         },
         {
-            title: "yoga",
+            title: "know-the-signs",
             icon: <CiHeart size={30} />,
-            path: "/learnings/yoga",
+            path: "/learnings/know-the-signs",
         },
         {
-            title: "personal-trainings",
+            title: "how-to-prevent",
             icon: <CiHeart size={30} />,
-            path: "/learnings/personal-trainings",
+            path: "/learnings/how-to-prevent",
+        },
+        {
+            title: "more",
+            icon: <CiHeart size={30} />,
+            path: "/learnings/more",
         },
     ],
     'account': [
         {
-            title: "account details",
+            title: "user",
             icon: <CiHeart size={30} />,
-            path: "/",
-        },
-        {
-            title: "profile",
-            icon: <CiHeart size={30} />,
-            path: "/body-parts",
+            path: "/account",
         },
         {
             title: "privacy",
             icon: <CiHeart size={30} />,
-            path: "/goals",
+            path: "/account/privacy",
+        },
+        {
+            title: "security",
+            icon: <CiHeart size={30} />,
+            path: "/account/security",
         },
     ],
 };
@@ -86,44 +97,13 @@ export const tabs = {
             'bowel',]
     },
     learnings: {
-        'learnings': [
-            'individual',
-            'family',
-            'relative',
-            'friend',
-        ],
-        'Yoga': [
-            'individual',
-            'family',
-            'relative',
-            'friend',
-        ],
-        'personal-training': [
-            'individual',
-            'family',
-            'relative',
-            'friend',
-        ]
+   
     },
     account: {
-        'accounts': [
-            'individual',
+        'account': [
             'family',
-            'relative',
-            'friend',
+            'doctor',
         ],
-        'Yoga': [
-            'individual',
-            'family',
-            'relative',
-            'friend',
-        ],
-        'personal-training': [
-            'individual',
-            'family',
-            'relative',
-            'friend',
-        ]
     },
 
 }

@@ -29,7 +29,7 @@ const Sidenav = () => {
         <ul className="space-y-4">
           {sideNavOptions[basePath]?.map((nav) => (
             <li key={nav.title}>
-              <Link href={nav.path} className={`flex gap-2 items-center p-2 rounded-md hover:bg-slate-100 font-semibold `}>
+              <Link href={nav.path} className={`flex gap-2 items-center p-2 rounded-md hover:bg-slate-100 font-semibold capitalize`}>
                 {nav.icon}
                 <span>{nav.title}</span>
               </Link>

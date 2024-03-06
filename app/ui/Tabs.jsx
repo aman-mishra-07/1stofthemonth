@@ -7,13 +7,13 @@ const Tabs = () => {
   const path = usePathname();
   const searchParams = useSearchParams();
   const { replace } = useRouter();
-  
+
   let currentPath = path.split("/").filter((i) => i !== "");
-  
   let basePath = currentPath[0];
   let subPath = currentPath[1];
   const pageTabs = subPath ? tabs[basePath][subPath] : tabs[basePath][basePath];
-  const [activeTab, setActiveTab] = useState(pageTabs[0]);
+
+  const [activeTab, setActiveTab] = useState(pageTabs ? pageTabs[0] : "");
 
   const handleTab = (tab) => {
     const params = new URLSearchParams(searchParams);
@@ -23,7 +23,6 @@ const Tabs = () => {
     } else {
       params.delete("tab");
     }
-
     replace(`${path}?${params.toString()}`);
   };
   useEffect(() => {
@@ -42,7 +41,7 @@ const Tabs = () => {
               }`}
               onClick={() => setActiveTab(pageTabs[i])}
             >
-              {tabName?.replace('-', ' ')}
+              {tabName?.replace("-", " ")}
             </button>
           </li>
         ))}

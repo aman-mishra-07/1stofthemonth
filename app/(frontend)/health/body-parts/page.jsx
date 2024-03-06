@@ -1,21 +1,24 @@
-import Dental from './components/Dental'
-import Skin from './components/Skin'
-import Sight from './components/Sight'
-import BloodTest from './components/BloodTest'
+import Dental from "./components/Dental";
+import Skin from "./components/Skin";
+import Sight from "./components/Sight";
+import BloodTest from "./components/BloodTest";
+import { Suspense } from "react";
 
-const page = ({searchParams}) => {
+const page = ({ searchParams }) => {
   const tabs = {
-    'dental' : <Dental />,
-    'skin' : <Skin/>,
-    'sight' : <Sight />,
-    'blood-test' : <BloodTest />,
-}
+    dental: <Dental />,
+    skin: <Skin />,
+    sight: <Sight />,
+    "blood-test": <BloodTest />,
+  };
 
-return (
-<div>
-  {tabs[searchParams.tab] ? tabs[searchParams.tab] : tabs.dental}
-</div>
-)
-}
+  return (
+    <div>
+      <Suspense>
+        {tabs[searchParams.tab] ? tabs[searchParams.tab] : tabs.dental}
+      </Suspense>
+    </div>
+  );
+};
 
-export default page
+export default page;
